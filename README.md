@@ -40,3 +40,41 @@ Esto seria hasta el momento, es algo sencillo como para probar la funcionalidad 
 
 ----------------------------------------------------------------------------------------------------------------
 
+**Hello
+
+-This code was created to automate sending emails through a Gmail account using the Python tool yagmail.
+
+The tool's GitHub: https://github.com/kootenpv/yagmail
+
+----------------------------------------------------------------------------------------------------------------
+
+- **How it works:**
+
+-First, you must set up your Gmail account so you can create a password for the tool to access your account and send emails.
+Here's a video that explains how to do this. The video is in Spanish, but you can use subtitles: https://www.youtube.com/watch?v=eBm6yLIjv3U
+
+-After you have the password, you must set the username and password in the code:
+
+```python
+user='email@gmail.com'
+password='password'
+
+```
+
+-You must keep the .txt as is and if you want to change the .txt to another one you must modify the following line of code:
+
+```python
+try: 
+    with open ("cambiar el archivo .txt", "r") as file :
+        recipients=[line.strip() for line  in file if line.strip()]
+except FileNotFoundError:
+    print ("El archivo (cambiar) no se encuentra.")
+    exit()
+except Exception as e:
+    print(f'Error al leer el archivo (cambiar): {e}')
+    exit()
+```
+
+-In the file line, you must enter all the paths to the files you want to send to the emails. This is also the subject, message, and signature.
+
+This is something simple enough for testing the tool's functionality and automating email sending. It can also be used for ethical hacking purposes.

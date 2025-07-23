@@ -2,8 +2,8 @@ import yagmail
 import os
 
 #User credentials
-user='xxxocampocuervo321xxx@gmail.com'
-password='atyd ljqq icqe itej'
+user='youremail@gmail.com'
+password='yourpassword'
 
 #Connections and error handle 
 try: 
@@ -24,14 +24,14 @@ except Exception as e:
     print(f'Error al leer el archivo emails.txt: {e}')
     exit()
 
-files=[r'C:\Users\Jaime\Desktop\campus.pdf',r'C:\Users\Jaime\Desktop\Factura_Sara.pdf']
-subjects="Correo empresarial"
+files=[r'rute/to/your/file1', r'rute/to/your/file2']  # Add your file paths here
+subjects=" title of the email"
 messages="""
-    <p> Hola, te enviamos la documentacion solicitada sobre el campus y tu horario adjuntando la factura de sara </p>
-    <p> Visita la pagina web: <a href="https://www.tdea.edu.co"> Clic aqui </a></p>
+    <p> text </p>
+    <p> text </p>
 """
 signature="""
-    <p> Atentamente, Jarbey Ocampo Tecnologo en sistemas </p>
+    <p> text </p>
 """
 #Combine messages and signature
 content = messages + signature
